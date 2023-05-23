@@ -2,6 +2,7 @@ import { ITransportCommand, ISignature, TransportCryptoManager } from '@ts-core/
 import * as _ from 'lodash';
 
 export class TransportCryptoManagerMetamaskFrontend extends TransportCryptoManager {
+    
     // --------------------------------------------------------------------------
     //
     //  Static Methods
