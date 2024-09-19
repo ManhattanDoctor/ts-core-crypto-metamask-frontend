@@ -7,7 +7,7 @@ export class Metamask {
     //
     // --------------------------------------------------------------------------
 
-    public static ALGORITHM = 'Ed25519Metamask';
+    public static ALGORITHM = 'KeccakMetamask';
 
     // --------------------------------------------------------------------------
     //

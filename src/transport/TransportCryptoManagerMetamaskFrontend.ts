@@ -1,4 +1,4 @@
-import { ITransportCommand, ISignature, TransportCryptoManager } from '@ts-core/common';
+import { ITransportCommand, ISignature, TransportCryptoManager, TransformUtil, ObjectUtil } from '@ts-core/common';
 import { Metamask } from '../Metamask';
 import * as _ from 'lodash';
 
@@ -20,6 +20,16 @@ export class TransportCryptoManagerMetamaskFrontend extends TransportCryptoManag
 
     constructor(protected wallet: any) {
         super();
+    }
+
+    // --------------------------------------------------------------------------
+    //
+    //  Protected Methods
+    //
+    // --------------------------------------------------------------------------
+
+    protected toStringRequest<U>(item: U): string {
+        return _.isObject(item) ? TransformUtil.fromJSON(ObjectUtil.sortKeys(item, true)) : item.toString();
     }
 
     // --------------------------------------------------------------------------
